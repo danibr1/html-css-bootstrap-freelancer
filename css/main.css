@@ -1,0 +1,343 @@
+/* ############################################################ */
+/* GENERAL */
+body{
+    background: #fff;
+    color: white;
+    font-size:20px
+}
+
+h1,
+h2,
+h3,
+h4{
+    text-transform: uppercase;
+    color: white;
+}
+h4{
+    font-size: 24px;
+}
+
+p{
+    line-height: 1.5;
+}
+p:first-letter {
+    text-transform: uppercase;
+}
+/* ############################################################ */
+/* UTILITIES */
+
+/* Colors */
+.bg-color-blue {
+    background: #2c3e50;
+}
+.bg-color-lightblue {
+    background: #3a546d;
+}
+.bg-color-green{
+    background:#1abc9c;
+}
+.text-black{
+    color:#333;
+}
+.text-white{
+    color: white;
+}
+
+
+/* BOX - fake content */
+.box{
+    background-color: lightgray;
+}
+
+/* CARDS - fake content */
+.card{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* STAR DIVDER */
+.dark-divider{
+    color: #2c3e50;
+}
+.divider{
+   display: inline-block;
+    width: 470px;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.divider i {
+    padding: 0 25px;
+    position: relative;
+    top: 8px;
+}
+.divider::before, .divider::after {
+    content: '';
+    display: inline-block;
+    width: 35%;
+    border-radius: 20px;
+    border: 2px solid currentColor;
+}
+
+/* ############################################################
+    HEADER
+############################################################### */
+
+.my-navbar{
+    height: 90px;
+    border:0;
+}
+
+.navbar-default .navbar-brand{
+    font-size: 26px;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a{
+    font-size: 16px;
+    color: white;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #1cb89a;
+    background-color: transparent;
+}
+
+
+/* ############################################################
+    HERO
+############################################################### */
+.hero img {
+    max-width: 250px;
+}
+
+.hero h1{
+    font-size:55px
+}
+.hero h4{
+    font-size:25px
+}
+
+
+/* ############################################################
+    PORTFOLIO
+############################################################### */
+
+.portfolio .card img{
+    width: 100%;
+    border-radius:10px;
+    vertical-align:middle;
+}
+
+
+/* ABOUT */
+.about h2{
+    color: #fff;
+}
+.about .box{
+    height:200px;
+}
+
+/* CONTACT */
+.contact .box{
+    height: 400px;
+}
+
+/* TOP-FOOTER */
+.footer .top-footer .box{
+    height:100px;
+    margin-bottom: 20px;
+}
+.fas {
+    font-weight: 900;
+}
+.fas:hover {
+    background-color: white;
+}
+.fa-download::before {
+    content: "\f019";
+}
+
+/* ############################################################
+    ABOUT
+############################################################### */
+.my-btn {
+    padding: 10px 18px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1abc9c;
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+
+
+/* ############################################################
+    CONTACT
+############################################################### */
+.my-form label{
+    margin: 0;
+    font-weight: normal;
+    color: #333;
+}
+.my-form input[type="text"],
+.my-form input[type="email"],
+.my-form input[type="number"],
+.my-form textarea{
+    height: 25px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+}
+.my-form textarea{
+    height: 150px;
+}
+
+/* ############################################################
+    FOTTER
+############################################################### */
+.footer .list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.footer .list-inline a.social {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    line-height: 55px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all .6s;
+}
+
+.footer span {
+    color: #1abc9c;
+}
+
+
+/* #############################################################
+    MEDIA QUERY
+################################################################ */
+
+/*XS MOBILE ****************************************************/
+@media screen and (max-width: 767px){
+    
+    /* Divider */
+    .divider{
+        width: 80%;
+    }
+    .divider i{
+        padding: 0 10px;
+    }
+    .divider::before, .divider::after {
+        content: '';
+        display: inline-block;
+        width: 20%;
+        border-radius: 20px;
+        border: 2px solid currentColor;
+    }
+    
+    /* Header navbar */
+    .navbar-default .navbar-brand{
+        font-size: 16px;
+        color: white;
+    }
+
+    /* Hero */
+    .hero h1{
+        font-size:30px
+    }
+    .hero h4{
+        font-size:16px
+    }
+
+    /* Portfolio */
+    .portfolio h2,
+    .about h2,
+    .contact h2{
+        font-size: 30px
+    }
+
+    /* About */
+    .about .my-btn{
+        margin-top:50px;
+    }
+
+    /* Contact */
+    .contact .my-form{
+        margin-top: 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        font-size: 16px;
+    }
+    .footer h4{
+        margin-top: 30px ;
+        font-size: 16px;
+    }
+}
+
+/* MD TABLET ***************************************************/
+@media screen and (min-width: 768px) and (max-width: 991px){
+    
+    .card{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+      /* Contact */
+      .contact .my-form{
+        margin-top: 20px;
+    }
+
+    /* Footer */
+    .footer .list-inline a.social {
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        line-height: 50px;
+    }
+    .footer .list-inline {
+        padding-left: 0;
+        margin-left: -5px;
+        list-style: none;
+    }
+    
+    .list-inline > li {
+        display: inline-block;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+       
+    .footer {
+        font-size: 20px;
+    }
+    .footer h4{
+        font-size: 20px;
+    }
+
+}
+
+/* LG TABLET ***************************************************/
+@media screen and (min-width: 992px){
+    /* Star Divider */
+    .divider{
+        width: 480px;
+    }
+    .divider i{
+    padding: 0 25px;
+    }
+}
