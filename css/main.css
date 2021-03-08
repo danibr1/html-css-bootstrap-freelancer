@@ -44,37 +44,64 @@ p:first-letter {
 }
 
 
-/* BOX - fake content */
-.box{
-    background-color: lightgray;
-}
-
-/* CARDS - fake content */
+/* CARDS */
 .card{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+
+/* LAYHOVER */
+.portfolio .card{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.portfolio .layover:hover{
+    opacity: 1;
+}
+.portfolio .layover{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,150,100, .5);
+    opacity: 0;
+    transition: opacity .3s;
+}
+.portfolio .layover i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #fff;
+}
+
+
 
 /* STAR DIVDER */
 .dark-divider{
     color: #2c3e50;
 }
 .divider{
-   display: inline-block;
-    width: 470px;
-    margin-bottom: 15px;
+    display: inline-block;
+    width: 250px;
+    margin: 30px auto;    
     font-size: 30px;
 }
 .divider i {
-    padding: 0 25px;
-    position: relative;
-    top: 8px;
+    width: 20%;
+    font-size: 28px;
+    vertical-align: middle;
 }
-.divider::before, .divider::after {
+.divider::before, 
+.divider::after {
     content: '';
     display: inline-block;
-    width: 35%;
-    border-radius: 20px;
+    width: 30%;
+    border-radius: 10px;
     border: 2px solid currentColor;
 }
 
@@ -153,7 +180,7 @@ p:first-letter {
 .fas {
     font-weight: 900;
 }
-.fas:hover {
+.fa-plus:hover {
     background-color: white;
 }
 .fa-download::before {
